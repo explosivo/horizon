@@ -66,7 +66,7 @@ void Horizon::run()
         }
         while (SDL_PollEvent(&event))
         {
-            //input.updateInput(event);
+            input.updateInput(event);
             
             if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
             {
@@ -87,6 +87,7 @@ void Horizon::stop()
 
 void Horizon::update(int delta)
 {
+	player.update(delta);
 }
 
 void Horizon::drawFrame()
@@ -99,6 +100,7 @@ void Horizon::drawFrame()
 
 void Horizon::render()
 {
+	player.render();
 }
 
 

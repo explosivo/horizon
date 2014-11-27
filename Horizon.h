@@ -8,6 +8,9 @@
 #ifndef __Horizon__
 #define __Horizon__
 
+#include "Player.h"
+#include "Input.h"
+
 #include <iostream>
 #include <string>
 #ifdef _WIN32
@@ -36,6 +39,9 @@ namespace dg
         SDL_Window *window;
         SDL_GLContext glcontext;
         
+		Input input;
+		Player player;
+
         void init();
         void run();
         void stop();
