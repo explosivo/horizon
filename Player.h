@@ -21,7 +21,6 @@ namespace dg
 
 		int jumpVel;
 		bool grounded;
-		int jumpTime;
 
 		virtual void update(int delta);
 	//	virtual void render();

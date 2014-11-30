@@ -19,7 +19,6 @@ Player::Player()
 	yVel = 0;
 	speed = 10;
 	jumpVel = speed * 2;
-	jumpTime = 0;
 	grounded = false;
 }
 
