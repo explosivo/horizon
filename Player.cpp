@@ -18,6 +18,9 @@ Player::Player()
 	xVel = 0;
 	yVel = 0;
 	speed = 10;
+	jumpVel = speed * 2;
+	jumpTime = 0;
+	grounded = false;
 }
 
 Player::~Player()
@@ -27,26 +30,19 @@ Player::~Player()
 
 void Player::update(int delta)
 {
-	if (Input::upPressed && yVel > -speed)
+	yVel += 2;
+
+	if (y >= 480 - w)
 	{
-		yVel -= 1;
+		yVel = 0;
+		y = 480 - w;
+		grounded = true;
 	}
 
-	if (Input::downPressed && yVel < speed)
+	if (Input::jumpPressed && grounded)
 	{
-	 yVel += 1;
-	}
-
-	if (!Input::upPressed && !Input::downPressed)
-	{
-		if (yVel < 0)
-		{
-			yVel += 1;
-		}
-		if (yVel > 0)
-		{
-			yVel -= 1;
-		}
+		yVel -= jumpVel;
+		grounded = false;
 	}
 
 	if (Input::leftPressed && xVel > -speed)

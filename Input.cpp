@@ -13,6 +13,7 @@ bool Input::upPressed = false;
 bool Input::downPressed = false;
 bool Input::leftPressed = false;
 bool Input::rightPressed = false;
+bool Input::jumpPressed = false;
 
 Input::Input()
 {
@@ -42,6 +43,9 @@ void Input::updateInput(SDL_Event event)
 			case SDLK_d:
 				rightPressed = true;
 				break;
+			case SDLK_SPACE:
+				jumpPressed = true;
+				break;
 		}
 	}
 	if (event.type == SDL_KEYUP)
@@ -59,6 +63,9 @@ void Input::updateInput(SDL_Event event)
 				break;
 			case SDLK_d:
 				rightPressed = false;
+				break;
+			case SDLK_SPACE:
+				jumpPressed = false;
 				break;
 		}
 	}

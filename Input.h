@@ -24,7 +24,7 @@ namespace dg
 		Input();
 		~Input();
 
-		static bool upPressed, downPressed, leftPressed, rightPressed;
+		static bool upPressed, downPressed, leftPressed, rightPressed, jumpPressed;
 		void updateInput(SDL_Event event);
 	};
 }
