@@ -68,8 +68,9 @@ void Horizon::run()
         {
             input.updateInput(event);
             
-            if (event.type == SDL_QUIT || event.key.keysym.sym == SDLK_ESCAPE)
+            if (event.type == SDL_QUIT)
             {
+				std::cout << "quitting" << std::endl;
                 running = false;
             }
         }
