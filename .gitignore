@@ -1,1 +1,16 @@
 bin/
+vsproj/Debug
+vsproj/Release
+vsproj/*.suo
+vsproj/*.user
+vsproj/*.userosscache
+vsproj/*.sln.docstates
+vsproj/ipch/
+vsproj/*.aps
+vsproj/*.ncb
+vsproj/*.opensdf
+vsproj/*.sdf
+vsproj/*.cachefile
+vsproj/*.psess
+vsproj/*.vsp
+vsproj/*.vspx

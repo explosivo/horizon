@@ -127,4 +127,5 @@ int main(int argc, char* args[])
 	Horizon horizon;
 	horizon.init();
 	horizon.run();
+	return 0;
 }
