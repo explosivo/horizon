@@ -37,7 +37,10 @@ namespace dg
         const std::string VERSION = "Experimental";
         
         SDL_Window *window;
+		SDL_Renderer *renderer;
         SDL_GLContext glcontext;
+		
+		const int fpsLimit = 60;
         
 		Input input;
 		Player player;

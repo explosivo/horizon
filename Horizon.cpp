@@ -48,6 +48,7 @@ void Horizon::init()
 void Horizon::run()
 {
     int time = 0;
+	int fpsLimitTime;
     int delta;
     if (!running)
     {
@@ -56,6 +57,7 @@ void Horizon::run()
     
     while (running)
     {
+		fpsLimitTime = SDL_GetTicks();
         delta = getDelta();
         if ((time += delta) >= 1000)
         {
@@ -64,6 +66,10 @@ void Horizon::run()
             frames = 0;
             time = 0;
         }
+		if ((1000 / fpsLimit) > (SDL_GetTicks() - fpsLimitTime))
+		{
+			SDL_Delay((1000 / fpsLimit) - (SDL_GetTicks() - fpsLimitTime));
+		}
         while (SDL_PollEvent(&event))
         {
             input.updateInput(event);
