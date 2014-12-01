@@ -66,10 +66,12 @@ void Horizon::run()
             frames = 0;
             time = 0;
         }
+#ifdef _WIN32
 		if ((1000 / fpsLimit) > (SDL_GetTicks() - fpsLimitTime))
 		{
 			SDL_Delay((1000 / fpsLimit) - (SDL_GetTicks() - fpsLimitTime));
 		}
+#endif
         while (SDL_PollEvent(&event))
         {
             input.updateInput(event);
