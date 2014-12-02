@@ -1,7 +1,5 @@
 //
-//  Horizon.h
-//
-//  Created by Zach Nickell on 11/19/14.
+//  Horizon
 //  Copyright (c) 2014 Devious Gamers. All rights reserved.
 //
 
@@ -10,6 +8,7 @@
 
 #include "Player.h"
 #include "Input.h"
+#include "World.h"
 
 #include <iostream>
 #include <string>
@@ -43,7 +42,8 @@ namespace dg
 		const int fpsLimit = 60;
         
 		Input input;
-		Player player;
+		World world;
+		//Player player;
 
         void init();
         void run();

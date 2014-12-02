@@ -1,7 +1,5 @@
 //
-//  Horizon.cpp
-//
-//  Created by Zach Nickell on 11/19/14.
+//  Horizon
 //  Copyright (c) 2014 Devious Gamers. All rights reserved.
 //
 
@@ -96,7 +94,8 @@ void Horizon::stop()
 
 void Horizon::update(int delta)
 {
-	player.update(delta);
+	world.update(delta);
+	//player.update(delta);
 }
 
 void Horizon::drawFrame()
@@ -109,7 +108,7 @@ void Horizon::drawFrame()
 
 void Horizon::render()
 {
-	player.render();
+	world.render();
 }
 
 

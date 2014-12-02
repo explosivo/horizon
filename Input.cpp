@@ -1,7 +1,5 @@
 //
-//  Input.cpp
-//
-//  Created by Zach Nickell on 11/27/14.
+//  Horizon
 //  Copyright (c) 2014 Devious Gamers. All rights reserved.
 //
 
