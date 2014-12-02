@@ -33,7 +33,12 @@ void Entity::render()
 	glEnd();
 }
 
-void Entity::getBounds()
+SDL_Rect Entity::getBounds()
 {
-
+	SDL_Rect rect;
+	rect.x = (int) x;
+	rect.y = (int) y;
+	rect.w = w;
+	rect.h = h;
+	return rect;
 }
